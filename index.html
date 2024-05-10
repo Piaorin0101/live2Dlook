@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live2d Cubism 2</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="avatar.png">
+    <style>
+        .live2d {
+            position: fixed;
+            bottom : 0;
+            left : 460px;
+        }
+    </style>
+</head>
+<body>
+    <div style="position:fixed;top:0;background-color: white;">
+        <select id="modelSelect" onchange="changeModel()">
+            <option value="model/22/model.default.json">模型 1</option>
+            <option value="model/23/model.default.json">模型 2</option>
+            <!-- 在这里添加更多模型选项 -->
+        </select>
+        <a href="live2d_3">Live2d Cubism 3</a>
+        <a target="_blank" href="https://github.com/imuncle/live2d">Github</a>
+    </div>
+    <canvas class="live2d" id="live2d" width="300" height="800"></canvas>
+</body>
+<script src="js/LAppDefine.js"></script>
+<script src="js/live2d.js"></script>
+<script>
+    function changeModel() {
+        var select = document.getElementById("modelSelect");
+        var selectedModel = select.options[select.selectedIndex].value;
+        loadlive2d(LAppDefine.CANVAS_ID, selectedModel);
+    }
+
+    lloadlive2d("live2d", "model/精靈123.model3.json"); // 默认加载第一个模型
+</script>
+</html>
