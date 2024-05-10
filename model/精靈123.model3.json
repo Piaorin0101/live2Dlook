@@ -1,0 +1,29 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "精靈123.moc3",
+		"Textures": [
+			"精靈123.4096/texture_00.png"
+		],
+		"Physics": "精靈123.physics3.json",
+		"DisplayInfo": "精靈123.cdi3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": [
+				"ParamMouthForm",
+				"ParamMouthOpenY"
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeROpen",
+				"ParamEyeLOpen"
+			]
+		}
+	]
+}
